@@ -1,0 +1,26 @@
+body{
+    background: url('https://starwarsblog.starwars.com/wp-content/uploads/2020/04/star-wars-backgrounds-25.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.intro-content{
+    width: 30%;
+    margin: 0 auto;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    font-size: 2rem;
+    color: blue;
+}
+
+.intro-content p{
+    padding: 50px 10px;
+}

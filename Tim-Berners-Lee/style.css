@@ -1,0 +1,271 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(235, 235, 235);
+    font-family: 'Open Sans', sans-serif;
+    color: rgb(82, 82, 82);
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: unset;
+}
+
+h1{
+    color: rgb(219, 77, 83);
+    font-weight: 800;
+    padding: 10px 0;
+}
+
+h2{
+    padding: 10px 0;
+    text-align: center;
+}
+
+h3{
+    text-align: center;
+}
+
+p{
+    text-align: justify;
+    padding: 10px;
+    line-height: 30px;
+}
+
+.bold{
+    font-weight: 600;
+}
+
+.light-switch{
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    border: 2px solid rgb(219, 77, 83);
+    border-radius: 10px;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 99;
+}
+
+.light-switch .fa-solid{
+    position: absolute;
+    font-size: 2rem;
+    color: rgb(219, 77, 83);
+}
+
+.hidden{
+    opacity: 0;
+}
+
+.night-body{
+    background-color: rgb(0, 30, 60);
+}
+
+.night-sections{
+    background-color: rgb(10, 25, 41);
+    color: white;
+}
+
+.light-sections{
+    background-color: rgb(253, 253, 253);
+}
+
+.night-social{
+    color: white;
+}
+
+
+.container{
+    width: 40%;
+    margin: 0 auto;
+    padding: 30px 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.container > *{
+    padding: 20px 30px;
+    border-radius: 10px;
+    box-shadow: 0 3px 5px rgb(122, 120, 120, .5);
+    position: relative;
+    overflow: hidden;
+}
+
+.container > * > *{
+    z-index: 1;
+}
+
+.bg-hover, .bg-hover2{
+    position: absolute;
+    content: '';
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(219, 77, 83, .1);
+    transition: all 0.5s ease-out;
+}
+
+.bg-hover{
+    left: 0;
+    transform: translate(-100%, 100%);
+}
+.bg-hover2{
+    right: 0;
+    transform: translate(100%, -100%);
+}
+
+.on-hover{
+    transform: translate(0, 0);
+}
+
+header{
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.photo-container{
+    border-radius: 50%;
+    height: 200px;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border: 5px solid rgb(235, 235, 235);
+    position: relative;
+    transition: all 0.3s ease-out;
+}
+
+.photo-container:hover{
+    border: 5px solid rgb(219, 77, 83);
+}
+
+.photo-container img{
+    transition: all 0.3s ease-out;
+    width: 100%;
+    position: absolute;
+}
+
+.photo-container img:hover{
+    width: 120%;
+}
+
+header button{
+    background-color: rgb(189, 66, 72);
+    border-radius: 5px;
+    letter-spacing: 2px;
+    border: 2px solid rgb(189, 66, 72);
+    padding: 10px 20px;
+    color: white;
+    font-size: 1.2rem;
+    transition: all 0.3s ease-out;
+    cursor: pointer;
+}
+
+header button:hover{
+    background-color: white;
+    color: rgb(219, 77, 83);
+    border: 2px solid rgb(219, 77, 83);
+}
+
+.social{
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    justify-content: center;
+    gap: 50px;
+    padding: 50px 0;
+    color: rgb(82, 82, 82);
+}
+
+.icon-social{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon-social > .fa-brands{
+    font-size: 2rem;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+}
+
+.icon-social > .fa-brands:hover{
+    color: rgb(219, 77, 83);
+    transform: translateY(-10px);
+}
+
+.icon-social > span{
+    padding: 10px 0;
+}
+
+.movies{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+}
+
+.movie{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.movie .image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.movie .image img{
+    width: 99.16px;
+    height: 148px;
+}
+
+.description{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.description > h3{
+    padding: 20px 0;
+}
+
+.description > p{
+    padding-left: 30px;
+}
+
+@media only screen and (max-width: 480px) {
+    .movie{
+        flex-flow: row wrap;
+    }
+    .container{
+        width: 90%;
+    }
+}
+
+@media only screen and (min-width: 481px) and (max-width: 1080px) {
+    .container{
+        width: 70%;
+    }
+}
