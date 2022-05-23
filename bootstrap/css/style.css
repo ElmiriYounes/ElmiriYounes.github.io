@@ -86,8 +86,23 @@ p{
 
 .item-menu-img{
     transition: all 0.3s ease-out;
+    transform: scale(1.1);
 }
 
 .item-menu-img:hover{
-    transform: scale(1.2);
+    transform: scale(1.3);
+}
+
+.gallery-hidden{
+    display: none;
+}
+
+.btn-gallery{
+    cursor: pointer;
+    color: rgb(25, 135, 84);
+}
+
+.btn-gallery:hover, .active-btn-gallery{
+    color: white;
+    background-color: rgb(25, 135, 84);
 }
