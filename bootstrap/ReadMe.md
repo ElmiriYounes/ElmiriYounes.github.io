@@ -22,8 +22,8 @@ Il s'agit d'un restaurant mexicain franchisé sur 3 villes.
         crossorigin="anonymous">
     </script>``
     * css: 
-    >> <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
-    >>    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    ``<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">``
 * via package à installer "npm -i bootstrap@5.2.0-beta1"
 
 [demo du site](https://ElmiriYounes.github.io/bootstrap)
