@@ -49,36 +49,38 @@
 
     <!-- form -->
     <div class="container py-5">
-        <form class="row g-0 flex-column align-items-center bg-success text-white pb-5 pt-4 px-2">
-            <div class="col-md-6">
-                <label for="validationServer01" class="form-label">First name</label>
-                <input type="text" class="form-control" value="Mark" required>
-            </div>
-            <div class="col-md-6">
-                <label for="validationServer02" class="form-label">Last name</label>
-                <input type="text" class="form-control" value="Otto" required>
-            </div>
-            <div class="col-md-6">
-                <label for="validationServerUsername" class="form-label">Email</label>
-                <div class="input-group has-validation">
-                    <span class="input-group-text" id="inputGroupPrepend3">@</span>
-                    <input type="email" class="form-control"
-                        aria-describedby="inputGroupPrepend3 validationServerUsernameFeedback" required>
+        <form class="row g-0 flex-column align-items-center justify-content-center text-white">
+            <div class="col-12 col-lg-6 bg-success d-flex flex-column justify-content-center pb-5 pt-4 px-2">
+                <div class="col-12">
+                    <label for="validationServer01" class="form-label">First name</label>
+                    <input type="text" class="form-control" value="Mark" required>
                 </div>
-            </div>
-            <div class="col-md-6">
-                <label for="validationServer04" class="form-label">Sujet</label>
-                <select class="form-select"
-                    aria-describedby="validationServer04Feedback" required>
-                    <option selected disabled value="">Sujet</option>
-                    <option>commande</option>
-                    <option>réservation</option>
-                    <option>job</option>
-                    <option>autre</option>
-                </select>
-            </div>
-            <div class="col-12 text-center mt-5">
-                <button class="btn btn-danger" type="submit">Submit form</button>
+                <div class="col-12">
+                    <label for="validationServer02" class="form-label">Last name</label>
+                    <input type="text" class="form-control" value="Otto" required>
+                </div>
+                <div class="col-12">
+                    <label for="validationServerUsername" class="form-label">Email</label>
+                    <div class="input-group has-validation">
+                        <span class="input-group-text" id="inputGroupPrepend3">@</span>
+                        <input type="email" class="form-control"
+                            aria-describedby="inputGroupPrepend3 validationServerUsernameFeedback" required>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <label for="validationServer04" class="form-label">Sujet</label>
+                    <select class="form-select"
+                        aria-describedby="validationServer04Feedback" required>
+                        <option selected disabled value="">Sujet</option>
+                        <option>commande</option>
+                        <option>réservation</option>
+                        <option>job</option>
+                        <option>autre</option>
+                    </select>
+                </div>
+                <div class="col-12 text-center mt-5">
+                    <button class="btn btn-danger" type="submit">Submit form</button>
+                </div>
             </div>
         </form>
     </div>
