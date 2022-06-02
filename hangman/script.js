@@ -1,6 +1,6 @@
 import { words } from "./wordsList.js";
 
-const word = "iii";
+const word = words[Math.floor(Math.random() * words.length)];
 const WordContainer = document.querySelector(".word-container");
 
 for (let char of word) {
