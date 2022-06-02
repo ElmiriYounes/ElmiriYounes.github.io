@@ -61,7 +61,7 @@ for (let letter of lettersKeyboard) {
           break;
       }
       indexMembersBody++;
-      livesTarget.innerHTML = `Tentatives: ${--lives}`;
+      livesTarget.innerHTML = `Lives: ${--lives}`;
       e.target.classList.add("not-found");
     } else {
       e.target.classList.add("found");
