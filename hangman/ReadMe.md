@@ -1,6 +1,6 @@
 # HANGMAN GAME
 
-![hangman game]('https://d338t8kmirgyke.cloudfront.net/icons/icon_pngs/000/001/955/original/hangman.png')
+![hangman game]('https://store-images.s-microsoft.com/image/apps.31378.14440169033196048.33ec04e1-f2d4-46ed-a05b-03b332738f93.8032cfe7-683a-4be1-8b4c-9da7dc14c2b3?q=90&w=480&h=270')
 
 Hangman is a guessing game for two or more players. One player thinks of a word, phrase or sentence and the other(s) tries to guess it by suggesting letters within a certain number of guesses.
 
