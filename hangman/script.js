@@ -1,6 +1,6 @@
 import { words } from "./wordsList.js";
 
-const word = words[Math.floor(Math.random() * words.length)];
+const word = "iii";
 const WordContainer = document.querySelector(".word-container");
 
 for (let char of word) {
@@ -74,7 +74,7 @@ for (let letter of lettersKeyboard) {
       (msgEnd.style.display = "block"),
       msgEnd.classList.add("apears-msg-end")),
       lives === 0 &&
-        ((msgEnd.innerHTML = `game over ! the hidden word: ${word}</br><a href="/"><button class="reset">Restart</button></a>`),
+        ((msgEnd.innerHTML = `game over ! the hidden word: ${word}</br><a href="/hangman"><button class="reset">Restart</button></a>`),
         (msgEnd.style.color = "red"),
         body.classList.add("hang"));
   });
