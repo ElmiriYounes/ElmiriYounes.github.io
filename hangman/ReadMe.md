@@ -10,4 +10,4 @@ Though the origins of the game are unknown, a variant is mentioned in a book of 
 A version which incorporated hanging imagery was described in a 1902 Philadelphia Inquirer article, which stated that it was popular at "White Cap" parties hosted by "Vigilance Committees" where guests would wear "white peaked caps with masks".
 
 ## link of website
-[hangman game](https://ElmiriYounes.io/hangman)
+[hangman game](https://elmiriyounes.github.io/hangma://elmiriyounes.github.io/hangman)
