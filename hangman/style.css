@@ -73,9 +73,10 @@ nav .title::after{
 }
 
 .word-container {
-  padding: 50px 0;
+  padding: 50px 5px;
   min-width: 20px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
 }
@@ -178,7 +179,6 @@ nav .title::after{
   flex-wrap: wrap;
   width: 80%;
   position: relative; /* for z-index at end of game */
-  width: 80%;
 }
 
 .letter-keyboard {
@@ -225,11 +225,17 @@ nav .title::after{
   cursor: auto;
 }
 
+
 @media only screen and (max-width: 1080px){
   .game{
     flex-direction: column;
   }
   .title{
     font-size: 3rem;
+  }
+}
+@media only screen and (max-width: 480px){
+  .keyboard {
+    width: 100%;
   }
 }
