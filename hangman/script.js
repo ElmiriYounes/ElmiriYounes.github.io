@@ -1,6 +1,7 @@
 import { words } from "./wordsList.js";
 
 const word = words[Math.floor(Math.random() * words.length)];
+console.log(word);
 const WordContainer = document.querySelector(".word-container");
 
 for (let char of word) {
@@ -36,6 +37,11 @@ const lettersKeyboard = document.querySelectorAll(".letter-keyboard");
 const lettersWord = document.querySelectorAll(".letter-word-container");
 const msgEnd = document.querySelector(".msg-end");
 const livesTarget = document.querySelector(".lives");
+var audioClicSuccess = new Audio("clicSuccess.mp3");
+var audioClicError = new Audio("clicError.mp3");
+var audioBattement = new Audio("battement.mp3");
+var audioCri = new Audio("criHangman.mp3");
+var audioBravo = new Audio("ben_bravo.mp3");
 for (let letter of lettersKeyboard) {
   letter.addEventListener("click", (e) => {
     let letterFound = false;
@@ -47,6 +53,7 @@ for (let letter of lettersKeyboard) {
     }
 
     if (!letterFound) {
+      audioClicError.play();
       switch (indexMembersBody) {
         case 2:
         case 4:
@@ -62,20 +69,26 @@ for (let letter of lettersKeyboard) {
       }
       indexMembersBody++;
       livesTarget.innerHTML = `Lives: ${--lives}`;
+      lives === 3 && audioBattement.play();
+      audioBattement.loop = true;
       e.target.classList.add("not-found");
     } else {
+      audioClicSuccess.play();
       e.target.classList.add("found");
     }
 
     e.target.disabled = true;
 
     (lives === 0 || countLetterFound === word.length) &&
-      ((keyboard.style.zIndex = "-1"),
+      ((audioBattement.pause(),
+      (keyboard.style.zIndex = "-1"),
       (msgEnd.style.display = "block"),
       msgEnd.classList.add("apears-msg-end")),
-      lives === 0 &&
-        ((msgEnd.innerHTML = `game over ! the hidden word: ${word}</br><a href="/hangman"><button class="reset">Restart</button></a>`),
-        (msgEnd.style.color = "red"),
-        body.classList.add("hang"));
+      lives === 0
+        ? (audioCri.play(),
+          (msgEnd.innerHTML = `game over ! the hidden word: ${word}</br><a href="/hangman"><button class="reset">Restart</button></a>`),
+          (msgEnd.style.color = "red"),
+          body.classList.add("hang"))
+        : audioBravo.play());
   });
 }
