@@ -1,0 +1,3 @@
+[submodule "snipmate-snippets/snippets"]
+	path = snipmate-snippets/snippets
+	url = git@github.com:ElazzouziNordineBeCode/cookieClicker.git
