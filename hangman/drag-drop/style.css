@@ -12,6 +12,7 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    cursor: grab;
 }
 
 .image-display{
@@ -22,6 +23,10 @@ body{
     align-items: center;
     min-height: 400px;
     position: relative;
+}
+
+.image-display:hover{
+    cursor: not-allowed;
 }
 
 .image-display span{

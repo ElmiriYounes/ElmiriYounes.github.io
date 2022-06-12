@@ -3,7 +3,7 @@ let target = document.getElementById("target");
 let images = document.querySelectorAll(".image");
 
 // disable drag/drop for image target
-display.querySelector('img').draggable = false;
+display.querySelector("img").draggable = false;
 
 /**
  * Drag/Drop for desktop with mouse cursor
@@ -17,9 +17,8 @@ display.querySelector('img').draggable = false;
       // store source url of image (=> image.getAttribute("src")) on a data variable named "sourceUrl" for example
       event.dataTransfer.setData("sourceUrl", image.getAttribute("src"));
     });
-
     // dragend = end of drag
-    image.addEventListener("dragend", () => {
+    image.addEventListener("dragend", (event) => {
       // opacity 1 on dragend
       image.style.opacity = "1";
     });
