@@ -2,6 +2,9 @@ let display = document.querySelector(".image-display");
 let target = document.getElementById("target");
 let images = document.querySelectorAll(".image");
 
+// disable drag/drop for image target
+display.querySelector('img').draggable = false;
+
 /**
  * Drag/Drop for desktop with mouse cursor
  */
