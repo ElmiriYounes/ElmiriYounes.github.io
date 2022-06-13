@@ -13,8 +13,12 @@ html{
 
 body {
     background-color: #2e005f;
-    height: 100%;
+    min-height: 100vh;
     width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
 }
 
 li {
@@ -26,18 +30,36 @@ a{
   color: unset;
 }
 
+.mouse-move{
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  background-color: white;
+  opacity: 0.1;
+  display: block;
+  position: fixed;
+  z-index: -1;
+}
+
+.mouse-move-hidden{
+  opacity: 0;
+}
+
 nav{
-    max-width: 1200px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: yellow;
-    font-size: 3rem;
-    margin: 0 auto;
-    letter-spacing: 5px;
-    /* font-family: 'Press Start 2P', cursive; */
-    font-family: 'Fredericka the Great', cursive;
-    padding: 20px;
+  position: absolute;
+  top: 0;
+  max-width: 1200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: yellow;
+  font-size: 3rem;
+  margin: 0 auto;
+  letter-spacing: 5px;
+  /* font-family: 'Press Start 2P', cursive; */
+  font-family: 'Fredericka the Great', cursive;
+  padding: 20px;
+  height: 80px;
 }
 
 nav .title{
@@ -62,6 +84,7 @@ nav .title::after{
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
+  margin-top: 80px;
 }
 
 .text {
@@ -69,7 +92,7 @@ nav .title::after{
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  flex: 1;
+  padding: 20px;
 }
 
 .word-container {
@@ -79,21 +102,31 @@ nav .title::after{
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  background-color: red;
 }
 
 .letter-word-container {
   position: relative;
   font-size: 2rem;
   margin: 5px;
+  width: 0;
   padding: 5px 0;
-  width: 30px;
   text-align: center;
   color: white;
   overflow: hidden;
 }
 
+.a{
+  animation: a 0.3s ease-out forwards;
+}
+
+@keyframes a {
+  from{opacity: 0; width: 0;}
+  to{opacity: 1; width: 30px;}
+}
+
 .letter-word {
-  transition: all 0.8s ease-in-out;
+  transition: all 1s ease-in-out;
   display: block;
 }
 
@@ -179,7 +212,7 @@ nav .title::after{
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  width: 80%;
+  max-width: 800px;
   position: relative; /* for z-index at end of game */
 }
 
@@ -209,24 +242,29 @@ nav .title::after{
   box-shadow: 0px 5px 10px rgb(0, 0, 0, 0.5);
 }
 
-.not-found,
-.not-found:not(.nohover):hover {
-  background-color: #2e005f;
+.not-found {
   color: gray;
   border-color: gray;
-  transform: scale(1);
-  cursor: auto;
 }
 
-.found,
-.found:not(.nohover):hover {
-  background-color: #2e005f;
+.found {
   color: yellow;
   border-color: yellow;
-  transform: scale(1);
-  cursor: auto;
 }
 
+.not-found:not(.nohover):hover, .found:not(.nohover):hover{
+  background-color: transparent;
+  transform: scale(1);
+  box-shadow: unset;
+}
+
+.not-found:not(.nohover):hover{
+  color: gray;
+}
+
+.found:not(.nohover):hover{
+  color: yellow;
+}
 
 @media only screen and (max-width: 1080px){
   .game{
@@ -234,6 +272,14 @@ nav .title::after{
   }
   .title{
     font-size: 3rem;
+  }
+  .word-container {
+    padding: 10px 5px;
+  }
+}
+@media only screen and (min-width: 768px) and (orientation: landscape){
+  .game{
+    flex-direction: row;
   }
 }
 @media only screen and (max-width: 480px){
