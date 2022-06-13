@@ -9,6 +9,7 @@
 
 html{
     height: 100%;
+    overflow-x: hidden;
 }
 
 body {
@@ -270,6 +271,16 @@ nav .title::after{
   .game{
     flex-direction: column;
   }
+}
+@media only screen and (max-width: 1080px) and (orientation: portrait){
+  .keyboard{
+    flex-wrap: nowrap;
+    max-width: 250px;
+    overflow-x: scroll;
+    justify-content: flex-start;
+  }
+}
+@media only screen and (max-width: 1080px){
   .title{
     font-size: 3rem;
   }
@@ -277,7 +288,7 @@ nav .title::after{
     padding: 10px 5px;
   }
 }
-@media only screen and (min-width: 768px) and (orientation: landscape){
+@media only screen and (min-width: 20px) and (orientation: landscape){
   .game{
     flex-direction: row;
   }
