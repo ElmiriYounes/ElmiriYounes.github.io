@@ -213,7 +213,6 @@ nav .title::after{
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  max-width: 800px;
   position: relative; /* for z-index at end of game */
 }
 
@@ -221,7 +220,7 @@ nav .title::after{
   background-color: transparent;
   font-size: 2rem;
   border: 2px solid white;
-  padding: 5px;
+  padding: 5px 10px;
   margin: 5px;
   width: 50px;
   text-transform: uppercase;
@@ -230,6 +229,9 @@ nav .title::after{
   cursor: pointer;
   transition: all 0.2s ease-out;
   transform: scale(0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .letter-keyboard-scaling{
@@ -273,11 +275,18 @@ nav .title::after{
   }
 }
 @media only screen and (max-width: 1080px) and (orientation: portrait){
+  .text{
+    width: 100vw;
+    display: inline-block;
+  }
   .keyboard{
     flex-wrap: nowrap;
-    max-width: 250px;
-    overflow-x: scroll;
+    background-color: blue;
     justify-content: flex-start;
+    overflow-x: scroll;
+  }
+  .letter-keyboard{
+    padding: 5px 20px;
   }
 }
 @media only screen and (max-width: 1080px){
@@ -291,10 +300,5 @@ nav .title::after{
 @media only screen and (min-width: 20px) and (orientation: landscape){
   .game{
     flex-direction: row;
-  }
-}
-@media only screen and (max-width: 480px){
-  .keyboard {
-    width: 100%;
   }
 }
