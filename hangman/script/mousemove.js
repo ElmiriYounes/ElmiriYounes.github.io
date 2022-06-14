@@ -1,60 +1,45 @@
 (() => {
-  let circles = document.querySelectorAll(".mouse-move");
-  let speed = 0; // secondes
-  const keyboard = document.querySelector(".keyboard");
+  let circle = document.querySelector(".mouse-move");
 
-  circles.forEach((circle) => {
-    circle.style.transition = `all ${speed}s ease-out`;
-    speed += 0.2;
-  });
+  /**
+   *
+   * @param {String} toggle
+   */
+  const moveCircle = (toggle) => {
+    toggle === "hide"
+      ? circle.classList.add("mouse-move-hidden")
+      : circle.classList.remove("mouse-move-hidden");
+  };
 
-  document.body.addEventListener("mousemove", (e) => {
-    circles.forEach((circle) => {
-      circle.style.top = e.clientY - 60 + "px";
+  document.body.addEventListener(
+    "mousemove",
+    (e) => {
+      circle.style.top = e.clientY - 50 + "px";
       circle.style.left = e.clientX - 50 + "px";
-    });
-  });
+      moveCircle("not hide");
+    },
+    false
+  );
 
-  document.body.addEventListener("mouseenter", () => {
-    circles.forEach((circle) => {
-      circle.classList.remove("mouse-move-hidden");
-    });
-  });
+  document.body.addEventListener(
+    "mouseleave",
+    () => {
+      moveCircle("hide");
+    },
+    false
+  );
 
-  document.body.addEventListener("mouseleave", () => {
-    circles.forEach((circle) => {
-      circle.classList.add("mouse-move-hidden");
-    });
-  });
-
-  keyboard.addEventListener("mouseenter", () => {
-    circles.forEach((circle) => {
-      circle.classList.add("mouse-move-hidden");
-    });
-  });
-
-  keyboard.addEventListener("mouseleave", () => {
-    circles.forEach((circle) => {
-      circle.classList.remove("mouse-move-hidden");
-    });
-  });
-
-  document.body.addEventListener("touchstart", (e) => {
-    circles.forEach((circle) => {
-        circle.classList.remove("mouse-move-hidden");
-    });
-  });
-
-  document.body.addEventListener("touchmove", (e) => {
-    circles.forEach((circle) => {
-      circle.style.top = e.clientY - 60 + "px";
+  document.body.addEventListener(
+    "touchmove",
+    (e) => {
+      circle.style.top = e.clientY - 50 + "px";
       circle.style.left = e.clientX - 50 + "px";
-    });
-  });
+      moveCircle("not hide");
+    },
+    false
+  );
 
   document.body.addEventListener("touchend", (e) => {
-    circles.forEach((circle) => {
-        circle.classList.add("mouse-move-hidden");
-    });
+    moveCircle("hide");
   });
 })();

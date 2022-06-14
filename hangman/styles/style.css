@@ -100,6 +100,7 @@ nav .title::after{
   align-items: center;
   justify-content: space-between;
   padding: 20px;
+  width: 860px;
 }
 
 .word-container {
@@ -246,8 +247,8 @@ nav .title::after{
 .keyboard {
   padding: 5px;
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
+  justify-content: center;
   position: relative; /* for z-index at end of game */
 }
 
@@ -294,6 +295,7 @@ nav .title::after{
   background-color: transparent;
   transform: scale(1);
   box-shadow: unset;
+  cursor: auto;
 }
 
 .not-found:not(.nohover):hover{
@@ -304,13 +306,16 @@ nav .title::after{
   color: yellow;
 }
 
-@media only screen and (max-width: 1080px){
+@media only screen and (max-width: 1200px){
   .game{
-    flex-direction: column;
     width: 100%;
   }
 }
 @media only screen and (max-width: 1080px) and (orientation: portrait){
+  .game{
+    flex-direction: column;
+    width: 100%;
+  }
   .text{
     width: 100vw;
     display: inline-block;
