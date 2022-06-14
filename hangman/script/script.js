@@ -17,7 +17,7 @@ import { words } from "./wordsList.js";
     letterWordContainer.appendChild(letterWord);
     WordContainer.appendChild(letterWordContainer);
     setTimeout(() => {
-      letterWordContainer.classList.add("a");
+      letterWordContainer.classList.add("apparition");
     }, delay * 300);
     delay++;
   }
