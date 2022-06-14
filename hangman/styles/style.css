@@ -8,7 +8,6 @@
 }
 
 html{
-    height: 100%;
     overflow-x: hidden;
 }
 
@@ -271,6 +270,7 @@ nav .title::after{
 @media only screen and (max-width: 1080px){
   .game{
     flex-direction: column;
+    width: 100%;
   }
 }
 @media only screen and (max-width: 1080px) and (orientation: portrait){
