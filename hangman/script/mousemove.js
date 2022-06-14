@@ -32,8 +32,8 @@
   document.body.addEventListener(
     "touchmove",
     (e) => {
-      circle.style.top = e.touches[0].clientX - 50 + "px";
-      circle.style.left = e.touches[0].clientY - 50 + "px";
+      circle.style.top = (e.touches[0].clientY - 50) + "px";
+      circle.style.left = (e.touches[0].clientX - 50) + "px";
       moveCircle("not hide");
     },
     false
