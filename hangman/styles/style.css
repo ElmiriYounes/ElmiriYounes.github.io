@@ -39,6 +39,13 @@ a{
   display: block;
   position: fixed;
   z-index: -1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: #2e005f;
+  text-transform: uppercase;
 }
 
 .mouse-move-hidden{
@@ -157,10 +164,40 @@ nav .title::after{
   padding: 20px 0;
 }
 
+.lives{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 2px;
+}
+
+.lives-sliders-container{
+  width: 20px;
+  height: 30px;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.lives-sliders{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: all 1s ease-in-out;
+}
+
+.lives-sliders span{
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .msg-end{
     font-size: 2rem;
     color: yellow;
     transform: scale(0);
+    padding: 0 0 10px 0;
     display: none;
 }
 

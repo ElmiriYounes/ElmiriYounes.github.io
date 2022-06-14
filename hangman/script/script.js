@@ -5,6 +5,8 @@ import { words } from "./wordsList.js";
   console.log(word);
   const WordContainer = document.querySelector(".word-container");
   const keyboard = document.querySelector(".keyboard");
+  let circlesContainer = document.querySelector('.mouse-move-container');
+  var circles = document.querySelectorAll(".mouse-move");
 
   // generate number of li depending word.length
   let delay = 1;
@@ -60,6 +62,7 @@ import { words } from "./wordsList.js";
       }
 
       if (!letterFound) {
+        circlesContainer.removeChild(circles[circlesContainer.children.length-1])
         audioClicError.play();
         indexMembersBody === 2 || indexMembersBody === 4
           ? membersBody[indexMembersBody].classList.add(
@@ -69,7 +72,9 @@ import { words } from "./wordsList.js";
           ? membersBody[indexMembersBody].classList.add("apears-arms-foot-left")
           : membersBody[indexMembersBody].classList.add("apears");
         indexMembersBody++;
-        livesTarget.innerHTML = `Lives: ${--lives}`;
+        // livesTarget.innerHTML = `Lives: ${--lives}`;
+        lives--;
+        document.querySelector('.lives-sliders').style.transform = `translateY(-${(indexMembersBody)*30}px)`;
         lives === 3 && (audioBattement.play(), (audioBattement.loop = true));
         e.target.classList.add("not-found");
       } else {

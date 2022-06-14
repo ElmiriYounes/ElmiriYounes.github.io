@@ -10,32 +10,39 @@
 
   document.body.addEventListener("mousemove", (e) => {
     circles.forEach((circle) => {
-      circle.style.top = e.clientY - 50 + "px";
+      circle.style.top = e.clientY - 60 + "px";
       circle.style.left = e.clientX - 50 + "px";
     });
   });
 
   document.body.addEventListener("mouseenter", () => {
     circles.forEach((circle) => {
-        circle.classList.remove('mouse-move-hidden');
+      circle.classList.remove("mouse-move-hidden");
     });
   });
 
   document.body.addEventListener("mouseleave", () => {
     circles.forEach((circle) => {
-        circle.classList.add('mouse-move-hidden');
+      circle.classList.add("mouse-move-hidden");
     });
   });
 
   keyboard.addEventListener("mouseenter", () => {
     circles.forEach((circle) => {
-        circle.classList.add('mouse-move-hidden');
+      circle.classList.add("mouse-move-hidden");
     });
   });
 
   keyboard.addEventListener("mouseleave", () => {
     circles.forEach((circle) => {
-        circle.classList.remove('mouse-move-hidden');
+      circle.classList.remove("mouse-move-hidden");
+    });
+  });
+
+  document.body.addEventListener("touchmove", (e) => {
+    circles.forEach((circle) => {
+      circle.style.top = e.clientY - 60 + "px";
+      circle.style.left = e.clientX - 50 + "px";
     });
   });
 })();
