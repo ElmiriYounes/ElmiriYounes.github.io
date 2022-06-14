@@ -41,7 +41,6 @@
 
   document.body.addEventListener("touchmove", (e) => {
     circles.forEach((circle) => {
-      circle.classList.remove("mouse-move-hidden");
       circle.style.top = e.clientY - 60 + "px";
       circle.style.left = e.clientX - 50 + "px";
     });
