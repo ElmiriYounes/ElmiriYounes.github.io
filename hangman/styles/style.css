@@ -316,33 +316,24 @@ nav .title::after{
     flex-direction: column;
     width: 100%;
   }
+}
+@media only screen and (max-width: 1080px){
   .text{
     width: 100vw;
     display: inline-block;
   }
-  .keyboard{
-    flex-wrap: nowrap;
-    justify-content: flex-start;
-    overflow-x: scroll;
-  }
-  .letter-keyboard{
-    padding: 5px 20px;
-  }
-}
-@media only screen and (max-width: 1080px){
   .title{
     font-size: 3rem;
+  }
+  .letter-keyboard{
+    font-size: 1.5rem;
+    width: 30px;
+    padding: 5px 20px;
   }
 }
 @media only screen and (orientation: landscape){
   .game{
     flex-direction: row;
-  }
-}
-@media only screen and (orientation: landscape) and (max-width: 1080px){
-  .keyboard{
-    height: 136px;
-    overflow-y: scroll;
   }
 }
 @media only screen and (orientation: landscape) and (max-width: 650px){
