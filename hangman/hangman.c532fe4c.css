@@ -199,6 +199,12 @@
     border-top-left-radius: 50%;
 }
 
+@media only screen and (max-width: 1080px) {
+    .vagues{
+        height: 30px;
+    }
+}
+
 @media only screen and (orientation: landscape) and (max-width: 1080px){
     .hangman{
         width: 200px;
@@ -245,4 +251,4 @@
     }
   }
 
-/*# sourceMappingURL=/hangman.5b367ddc.css.map */
+/*# sourceMappingURL=hangman.c532fe4c.css.map */
