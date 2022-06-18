@@ -291,4 +291,4 @@ var play = function play() {
 generateLetters();
 play();
 },{"./wordsList.js":"JlIg","./../assets/audio/clicSuccess.mp3":"TVib","./../assets/audio/clicError.mp3":"SakP","./../assets/audio/battement.mp3":"J9AB","./../assets/audio/criHangman.mp3":"djoS"}]},{},["JVpL"], null)
-//# sourceMappingURL=/script.df40bd4e.js.map
+//# sourceMappingURL=./script.df40bd4e.js.map
